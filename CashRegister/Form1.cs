@@ -135,7 +135,7 @@ namespace CashRegister
                 if (totalPrice <= 0)
                 {
                     bill.Font = new Font("Lydian Csv BT", 12, FontStyle.Bold);
-                    bill.Text = "Please Enter an Amount";
+                    bill.Text = "Please Enter a Correct Amount";
                 }
             }
             
