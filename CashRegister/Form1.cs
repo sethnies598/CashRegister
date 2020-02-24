@@ -95,7 +95,7 @@ namespace CashRegister
                     {
                         numberSoA.Text = "0";
                     }
-
+                    //jkjl
 
                     //increasing the number of times the button was pressed
                     billPressed++;
@@ -122,7 +122,7 @@ namespace CashRegister
                     bill.Text += "\nTax:   " + tax.ToString("C");
                     bill.Text += "\n\nTotal:   " + totalPrice.ToString("C");
 
-
+                }
                 //if one thing is entered wrong, the bill label will have this message
                 catch
                 {
