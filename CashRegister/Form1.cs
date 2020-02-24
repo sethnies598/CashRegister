@@ -113,6 +113,8 @@ namespace CashRegister
 
                     totalPrice = subTotal + tax;
 
+                    
+
                     //printing the bill
                     bill.Font = new Font("Lydian Csv BT", 8, FontStyle.Regular);
                     bill.Text = "Number of Swords Ordered: " + numberofSwords + "    " + "at " + priceS.ToString("C");
@@ -123,20 +125,20 @@ namespace CashRegister
                     bill.Text += "\n\nTotal:   " + totalPrice.ToString("C");
 
                 }
-                //if one thing is entered wrong, the bill label will have this message
+                //if one thing is entered wrong, the bill label will have one of these messages
                 catch
                 {
                     bill.Font = new Font("Lydian Csv BT", 12, FontStyle.Bold);
                     bill.Text = "Please Enter Correct Info";
 
                 }
-
+                if (totalPrice <= 0)
+                {
+                    bill.Font = new Font("Lydian Csv BT", 12, FontStyle.Bold);
+                    bill.Text = "Please Enter an Amount";
+                }
             }
-            if (totalPrice < 0)
-            {
-                bill.Font = new Font("Lydian Csv BT", 12, FontStyle.Bold);
-                bill.Text = "Cannot Buy Negative Amounts";
-            }
+            
 
         }
 
