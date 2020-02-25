@@ -52,13 +52,13 @@
             // 
             // ShopName
             // 
-            this.ShopName.AutoSize = true;
             this.ShopName.Font = new System.Drawing.Font("Lydian Csv BT", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShopName.Location = new System.Drawing.Point(12, 9);
             this.ShopName.Name = "ShopName";
-            this.ShopName.Size = new System.Drawing.Size(131, 59);
+            this.ShopName.Size = new System.Drawing.Size(594, 62);
             this.ShopName.TabIndex = 0;
             this.ShopName.Text = "label1";
+            this.ShopName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // swordLabel
             // 
@@ -69,7 +69,6 @@
             this.swordLabel.Size = new System.Drawing.Size(49, 20);
             this.swordLabel.TabIndex = 1;
             this.swordLabel.Text = "label2";
-            this.swordLabel.Click += new System.EventHandler(this.SwordLabel_Click);
             // 
             // shieldLabel
             // 
@@ -161,13 +160,12 @@
             this.numberSoA.Name = "numberSoA";
             this.numberSoA.Size = new System.Drawing.Size(33, 21);
             this.numberSoA.TabIndex = 13;
-            this.numberSoA.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
             // 
             // bill
             // 
             this.bill.AutoSize = true;
             this.bill.Font = new System.Drawing.Font("Lydian Csv BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bill.Location = new System.Drawing.Point(19, 274);
+            this.bill.Location = new System.Drawing.Point(24, 274);
             this.bill.Name = "bill";
             this.bill.Size = new System.Drawing.Size(0, 14);
             this.bill.TabIndex = 15;
@@ -195,7 +193,7 @@
             // 
             this.changeLabel.AutoSize = true;
             this.changeLabel.Font = new System.Drawing.Font("Lydian Csv BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeLabel.Location = new System.Drawing.Point(19, 462);
+            this.changeLabel.Location = new System.Drawing.Point(24, 457);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(0, 14);
             this.changeLabel.TabIndex = 18;
@@ -222,7 +220,7 @@
             this.reciept.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.reciept.Location = new System.Drawing.Point(269, 131);
             this.reciept.Name = "reciept";
-            this.reciept.Size = new System.Drawing.Size(281, 364);
+            this.reciept.Size = new System.Drawing.Size(281, 346);
             this.reciept.TabIndex = 20;
             this.reciept.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -246,7 +244,7 @@
             this.newOrder.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.newOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newOrder.Font = new System.Drawing.Font("Lydian Csv BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newOrder.Location = new System.Drawing.Point(12, 522);
+            this.newOrder.Location = new System.Drawing.Point(12, 503);
             this.newOrder.Name = "newOrder";
             this.newOrder.Size = new System.Drawing.Size(594, 33);
             this.newOrder.TabIndex = 22;
@@ -258,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 567);
+            this.ClientSize = new System.Drawing.Size(618, 546);
             this.Controls.Add(this.newOrder);
             this.Controls.Add(this.printReciept);
             this.Controls.Add(this.reciept);
