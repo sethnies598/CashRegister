@@ -53,6 +53,7 @@ namespace CashRegister
             swordLabel.Text = "The sharpest swords in the world!";
             shieldLabel.Text = "The strongest shields in the land!";
             SoALabel.Text = "The shiniest suits in the universe!";
+            bill.Text = " ";
 
             //changing what the other labels say
             amountS.Text = "Number of Items Ordered:";
@@ -64,8 +65,7 @@ namespace CashRegister
             changeButton.Text = "Shillings Due";
             printReciept.Text = "Scribe Reciept";
 
-            bill.Text = " ";
-
+            //making the new order button invisible
             newOrder.Hide();
         }
 
@@ -95,8 +95,7 @@ namespace CashRegister
                     {
                         numberSoA.Text = "0";
                     }
-                    //jkjl
-
+                   
                     //increasing the number of times the button was pressed
                     billPressed++;
 
@@ -112,8 +111,6 @@ namespace CashRegister
                     tax = taxPercent * subTotal;
 
                     totalPrice = subTotal + tax;
-
-                    
 
                     //printing the bill
                     bill.Font = new Font("Lydian Csv BT", 8, FontStyle.Regular);
@@ -132,6 +129,8 @@ namespace CashRegister
                     bill.Text = "Please Enter Correct Info";
 
                 }
+
+                //if the total price is less than or equal to 0, it will ask you to enter amounts that aren't 0 or negative
                 if (totalPrice <= 0)
                 {
                     bill.Font = new Font("Lydian Csv BT", 12, FontStyle.Bold);
@@ -175,6 +174,7 @@ namespace CashRegister
                     }
                 }
 
+                //if the amount entered is insufficient or there isn't an amount entered, it will ask for correct amount
                 else
                 {
                     changeLabel.Font = new Font("Lydian Csv BT", 12, FontStyle.Bold);
@@ -198,8 +198,9 @@ namespace CashRegister
         {
             SoundPlayer print = new SoundPlayer(Properties.Resources.print);
 
-            //if both the previous buttons have been pressed. then the reciept will print
+            //if both the previous buttons have been pressed, then the reciept will print
             //delay between each line to simulate printing
+            //weird printer sound plays 
             if (billPressed > 0 && changePressed > 0 && changeLabel.Text != "Please Enter Above Amounts" &&
                 bill.Text != "Please Enter Correct Info" && bill.Text != "Please Enter Correct Info")
             {
@@ -285,6 +286,7 @@ namespace CashRegister
             billPressed = 0;
             changePressed = 0;
 
+            //hidng the button again
             newOrder.Hide();
         }
     }
