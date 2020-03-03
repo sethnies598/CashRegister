@@ -28,9 +28,9 @@ namespace CashRegister
         int changePressed = 0;
 
         const double TAX_PERCENT = 0.13;
-        const double PRICE_S = 55.00;
-        const double PRICE_SH = 40.00;
-        const double PRICE_SoA = 100.00;
+        const double PRICE_SWORDS = 55.00;
+        const double PRICE_SHIELDS = 40.00;
+        const double PRICE_SUITSofARMOR = 100.00;
 
         double totalPrice, subTotal, tax, Tendered, Change;
 
@@ -108,7 +108,7 @@ namespace CashRegister
 
 
                     //doing the calculations
-                    subTotal = numberofShields * PRICE_SH + numberofSwords * PRICE_S + numberofSoA * PRICE_SoA;
+                    subTotal = numberofShields * PRICE_SHIELDS + numberofSwords * PRICE_SWORDS + numberofSoA * PRICE_SUITSofARMOR;
 
                     tax = TAX_PERCENT * subTotal;
 
@@ -117,9 +117,9 @@ namespace CashRegister
                     //printing the bill
                     bill.BackColor = Color.AntiqueWhite;
                     bill.Font = new Font("Lydian Csv BT", 8, FontStyle.Regular);
-                    bill.Text = "Number of Swords Ordered: " + numberofSwords + "    " + "at " + PRICE_S.ToString("C");
-                    bill.Text += "\nNumber of Shields Ordered: " + numberofShields + "    " + "at " + PRICE_SH.ToString("C");
-                    bill.Text += "\nNumber of Suits Ordered: " + numberofSoA + "    " + "at " + PRICE_SoA.ToString("C");
+                    bill.Text = "Number of Swords Ordered: " + numberofSwords + "    " + "at " + PRICE_SWORDS.ToString("C");
+                    bill.Text += "\nNumber of Shields Ordered: " + numberofShields + "    " + "at " + PRICE_SHIELDS.ToString("C");
+                    bill.Text += "\nNumber of Suits Ordered: " + numberofSoA + "    " + "at " + PRICE_SUITSofARMOR.ToString("C");
                     bill.Text += "\n\nSub Total:   " + subTotal.ToString("C");
                     bill.Text += "\nTax:   " + tax.ToString("C");
                     bill.Text += "\n\nTotal:   " + totalPrice.ToString("C");
@@ -208,16 +208,16 @@ namespace CashRegister
             if (billPressed > 0 && changePressed > 0 && changeLabel.Text != "Please Enter Above Amounts" &&
                 bill.Text != "Please Enter Correct Info" && bill.Text != "Please Enter Correct Info")
             {
-                reciept.Text = "Number of Swords Ordered: " + numberofSwords + "    " + "at " + PRICE_S.ToString("C");
+                reciept.Text = "Number of Swords Ordered: " + numberofSwords + "    " + "at " + PRICE_SWORDS.ToString("C");
                 print.Play();
                 reciept.Refresh();
                 Thread.Sleep(300);
 
-                reciept.Text += "\nNumber of Shields Ordered: " + numberofShields + "    " + "at " + PRICE_SH.ToString("C");
+                reciept.Text += "\nNumber of Shields Ordered: " + numberofShields + "    " + "at " + PRICE_SHIELDS.ToString("C");
                 reciept.Refresh();
                 Thread.Sleep(300);
 
-                reciept.Text += "\nNumber of Suits Ordered: " + numberofSoA + "    " + "at " + PRICE_SoA.ToString("C");
+                reciept.Text += "\nNumber of Suits Ordered: " + numberofSoA + "    " + "at " + PRICE_SUITSofARMOR.ToString("C");
                 reciept.Refresh();
                 Thread.Sleep(600);
 
@@ -269,14 +269,14 @@ namespace CashRegister
         private void NewOrder_Click(object sender, EventArgs e)
         {
             //changing all the labels back to saying nothing
-            reciept.Text = " ";
-            changeLabel.Text = " ";
-            bill.Text = " ";
+            reciept.Text = "";
+            changeLabel.Text = "";
+            bill.Text = "";
 
-            numberS.Text = " ";
-            numberSH.Text = " ";
-            numberSoA.Text = " ";
-            tenderedAmount.Text = " ";
+            numberS.Text = "";
+            numberSH.Text = "";
+            numberSoA.Text = "";
+            tenderedAmount.Text = "";
 
             bill.BackColor = Color.SandyBrown;
             changeLabel.BackColor = Color.SandyBrown;

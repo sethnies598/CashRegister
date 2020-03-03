@@ -216,13 +216,12 @@
             // 
             this.reciept.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.reciept.Cursor = System.Windows.Forms.Cursors.Default;
-            this.reciept.Font = new System.Drawing.Font("Lydian Csv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reciept.Font = new System.Drawing.Font("Lydian Csv BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reciept.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.reciept.Location = new System.Drawing.Point(269, 131);
+            this.reciept.Location = new System.Drawing.Point(269, 119);
             this.reciept.Name = "reciept";
-            this.reciept.Size = new System.Drawing.Size(281, 346);
+            this.reciept.Size = new System.Drawing.Size(281, 335);
             this.reciept.TabIndex = 20;
-            this.reciept.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // printReciept
             // 
@@ -230,7 +229,7 @@
             this.printReciept.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.printReciept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printReciept.Font = new System.Drawing.Font("Lydian Csv BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printReciept.Location = new System.Drawing.Point(269, 91);
+            this.printReciept.Location = new System.Drawing.Point(269, 83);
             this.printReciept.Name = "printReciept";
             this.printReciept.Size = new System.Drawing.Size(181, 33);
             this.printReciept.TabIndex = 21;
